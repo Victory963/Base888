@@ -1,0 +1,17 @@
+{
+  "name": "base888",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Base888 — clean-room architectural reconstruction of a Base44-style app-builder, derived from public client-bundle analysis with REA.",
+  "scripts": {
+    "install:all": "pnpm -C web install && pnpm -C server install",
+    "dev:web": "npm --prefix web run dev",
+    "dev:server": "npm --prefix server start",
+    "dev": "concurrently -n web,api -c cyan,magenta \"npm:dev:web\" \"npm:dev:server\"",
+    "build": "npm --prefix web run build",
+    "typecheck": "npm --prefix web run typecheck"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

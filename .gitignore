@@ -1,0 +1,27 @@
+# dependencies / builds
+node_modules/
+dist/
+.pnpm/
+.pnpm-store/
+
+# runtime data & secrets (SQLite db, uploads, outbox, generated JWT secret)
+base888/server/data/
+*.db
+*.db-wal
+*.db-shm
+.jwt_secret
+.env
+.env.*
+!.env.example
+
+# third-party clones used as tooling (not part of this project)
+tools/
+
+# captured third-party bundles — never redistributed
+evidence/
+
+# editor / os / logs
+.vscode/
+.idea/
+.DS_Store
+*.log

@@ -1,0 +1,20 @@
+{
+  "name": "base888-server",
+  "private": true,
+  "version": "0.2.0",
+  "description": "Base888 real backend — SQLite persistence, real auth (scrypt + JWT + refresh), authorization, file uploads, and real LLM/email integrations.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --no-warnings index.js",
+    "migrate": "node --no-warnings src/db.js --migrate"
+  },
+  "dependencies": {
+    "busboy": "^1.6.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "nodemailer": "^6.9.15",
+    "undici": "^8.12.3",
+    "ws": "^8.18.0"
+  }
+}
